@@ -1,0 +1,18 @@
+INFO 2018-12-14 20:21:11,750: com.qbt.handlers.OnlineChecker 
+ 监控程序启动！ 
+INFO 2018-12-14 20:21:22,408: com.qbt.handlers.OnlineChecker 
+ {"optype":"JZQ_QUERYSTATUS","data":{"jzq_ecuid":"6432170204","remote_ip":"/117.136.82.205:33298"},"error":{"code":"0","msg":"操作成功"}} 
+INFO 2018-12-14 20:21:31,800: com.qbt.handlers.OnlineChecker 
+ {"optype":"JZQ_QUERYSTATUS","data":{"jzq_ecuid":"0432218004","remote_ip":"/117.132.194.230:49123"},"error":{"code":"0","msg":"操作成功"}} 
+INFO 2018-12-14 20:22:14,206: com.qbt.handlers.OnlineChecker 
+ 监控程序启动！ 
+INFO 2018-12-14 20:22:24,775: com.qbt.handlers.OnlineChecker 
+ {"optype":"JZQ_QUERYSTATUS","data":{"jzq_ecuid":"6432170204","remote_ip":"/117.136.82.205:33298"},"error":{"code":"0","msg":"操作成功"}} 
+INFO 2018-12-14 20:22:34,240: com.qbt.handlers.OnlineChecker 
+ {"optype":"JZQ_QUERYSTATUS","data":{"jzq_ecuid":"0432218004","remote_ip":"/117.132.194.230:49123"},"error":{"code":"0","msg":"操作成功"}} 
+INFO 2018-12-14 20:24:24,544: com.qbt.handlers.OnlineChecker 
+ 监控程序启动！ 
+INFO 2018-12-14 20:24:35,093: com.qbt.handlers.OnlineChecker 
+ {"optype":"JZQ_QUERYSTATUS","data":{"jzq_ecuid":"6432170204","remote_ip":"/117.136.82.205:33298"},"error":{"code":"0","msg":"操作成功"}} 
+INFO 2018-12-14 20:24:44,482: com.qbt.handlers.OnlineChecker 
+ {"optype":"JZQ_QUERYSTATUS","data":{"jzq_ecuid":"0432218004","remote_ip":"/117.132.194.230:49123"},"error":{"code":"0","msg":"操作成功"}} 

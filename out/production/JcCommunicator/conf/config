@@ -1,0 +1,14 @@
+#此为精诚协议的配置文件，在运行时请务必保证数据库中center表的字段protocolType=4。此外，在修改配置文件时，请勿改变左侧的键值
+
+#webservice远程调用地址（谨慎修改）
+WsdlURL=http://121.41.57.77:1024/cqctsrw?wsdl
+#数据库URL，填写数据库服务器和端口，以及数据库名称
+DBURL=jdbc:sqlserver://121.41.57.77:1433;DatabaseName=NBJC
+#数据库用户
+DBUser=sa
+#数据库密码
+DBPwd =Angelr@078319
+#web程序运行的服务器
+IP=121.41.57.77 
+#精诚协议所在端口，可在网站进行配置
+PORT=8003

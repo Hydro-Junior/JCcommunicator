@@ -1,0 +1,20 @@
+<component name="ArtifactManager">
+  <artifact name="JcCommunicator:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/JcCommunicator_jar</output-path>
+    <root id="root">
+      <element id="archive" name="JcCommunicator.jar">
+        <element id="directory" name="META-INF">
+          <element id="file-copy" path="$PROJECT_DIR$/src/com/qbt/main/resources/META-INF/MANIFEST.MF" />
+        </element>
+        <element id="module-output" name="JcCommunicator" />
+      </element>
+      <element id="directory" name="libs">
+        <element id="file-copy" path="$PROJECT_DIR$/lib/gson-2.2.4.jar" />
+        <element id="file-copy" path="$PROJECT_DIR$/lib/json.jar" />
+        <element id="file-copy" path="$PROJECT_DIR$/lib/ksoap2-android-assembly-2.6.5-jar-with-dependencies.jar" />
+        <element id="file-copy" path="$PROJECT_DIR$/lib/log4j-1.2.16.jar" />
+        <element id="file-copy" path="$PROJECT_DIR$/lib/sqljdbc42.jar" />
+      </element>
+    </root>
+  </artifact>
+</component>

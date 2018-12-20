@@ -1,0 +1,9 @@
+Manifest-Version: 1.0
+Class-Path: libs/sqljdbc42.jar
+  libs/gson-2.2.4.jar
+  libs/ksoap2-android-assembly-2.6.5-jar-with-dependencies.jar
+  libs/json.jar
+  libs/log4j-1.2.16.jar
+  
+Main-Class: com.qbt.main.Main
+
