@@ -18,8 +18,9 @@ public class DeviceTmpDaoImpl extends BaseDao implements DeviceTmpDao {
 	private static SimpleDateFormat f = new SimpleDateFormat("yyyyMM");
 	
 	public boolean saveDeviceTmp(double value,int centerId,Command command){
-
 		String dt = f.format(new Date());
+		String tableName = "t_deviceTmp"+dt;
+		createTempDeviceTable(tableName);
 		String sql = "insert into t_deviceTmp"+dt+" (addr,readDate,centerID,showValue,fshowValue,"
 				+ "meterState,commState,isUse,readTime,enprNo) values"
 				+ " (?,?,?,?,?,0,0,0,GETDATE(),?)";
@@ -38,6 +39,8 @@ public class DeviceTmpDaoImpl extends BaseDao implements DeviceTmpDao {
 	//更新临时读表记录
 	public boolean updateDeviceTmp(double value,int centerId,Command command){
 		String dt = f.format(new Date());
+		String tableName = "t_deviceTmp"+dt;
+		createTempDeviceTable(tableName);
 		String sql = "update t_deviceTmp"+dt+" set readTime=GETDATE(),showValue=?,fshowValue=? where centerID=? and readDate=? and addr=?";
 		Calendar now = Calendar.getInstance();
 		int readDate = now.get(Calendar.DAY_OF_MONTH);
@@ -88,6 +91,21 @@ public class DeviceTmpDaoImpl extends BaseDao implements DeviceTmpDao {
 			return null;
 		}
 	}
-
+	public void createTempDeviceTable(String tableName) {
+		if (this.checkTableExists(tableName)) return;
+		String sql = "CREATE TABLE " + tableName + " " +
+				"(addr varchar(20) not NULL, " +
+				"readDate int not NULL, " +
+				"centerID int not NULL, " +
+				"showValue numeric(19,4)," +
+				"fshowValue numeric(19,4)," +
+				"meterState int, " +
+				"commState int," +
+				"isUse int," +
+				"readTime datetime," +
+				"enprNo varchar(20)," +
+				"PRIMARY KEY (addr,readDate,centerID))";
+		this.operUpdate(sql, null);
+	}
 }
 

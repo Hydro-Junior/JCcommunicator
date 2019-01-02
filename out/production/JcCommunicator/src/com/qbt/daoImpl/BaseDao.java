@@ -6,12 +6,7 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.lang.reflect.Field;
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.ResultSetMetaData;
-import java.sql.SQLException;
+import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Properties;
@@ -39,7 +34,7 @@ public class BaseDao {
 	 * @param pstmt
 	 * @param coon
 	 */
-	public void closeAll(ResultSet rs , PreparedStatement pstmt, Connection coon){
+	public void closeAll(ResultSet rs , Statement pstmt, Connection coon){
 		try {
 			if(rs != null){
 				rs.close();
@@ -82,6 +77,30 @@ public class BaseDao {
 			closeAll(rs,pstmt,conn);
 		}
 		return res>0? true:false;
+	}
+	public boolean checkTableExists(String tableName){
+		Connection conn = null;
+		Statement stmt = null;
+		ResultSet rs = null;
+		boolean res = false;
+		try {
+			conn =getConn(); //建立数据库连接
+			stmt = conn.createStatement(); //装载sql语句
+			rs = conn.getMetaData().getTables(null, null, tableName, null);
+			if (rs.next()) {
+				res = true;
+				System.out.println("该表已存在！");
+				return res;
+			}else {
+				System.out.println("该表不存在！创建新表！");
+				return res;
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}finally{
+			closeAll(rs,stmt,conn);
+		}
+		return res;
 	}
 	/**
 	 * 使用泛型方法和反射机制进行封装,实现查询

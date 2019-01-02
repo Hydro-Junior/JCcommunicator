@@ -44,7 +44,6 @@ public class BatchDoorOpener extends CommandHandler {
 				}
 				logger.info(ss);
 			} catch (Exception e) {
-				// TODO Auto-generated catch block
 				DBHandler.updateCmd_TP(command, 6);
 				e.printStackTrace();
 				logger.error(e.toString());

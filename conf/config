@@ -1,9 +1,9 @@
 #此为精诚协议的配置文件，在运行时请务必保证数据库中center表的字段protocolType=4。此外，在修改配置文件时，请勿改变左侧的键值
 
 #webservice远程调用地址（谨慎修改）
-WsdlURL=http://****?wsdl
+WsdlURL=http://IP:port/cqctsrw?wsdl
 #数据库URL，填写数据库服务器和端口，以及数据库名称
-DBURL=jdbc:sqlserver://****;DatabaseName=****
+DBURL=jdbc:sqlserver://****:1433;DatabaseName=QBTT1
 #数据库用户
 DBUser=sa
 #数据库密码
